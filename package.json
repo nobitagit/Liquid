@@ -1,0 +1,31 @@
+{
+	"name": "Liquid",
+	"version": "0.1",
+	"title": "Liquid",
+	"description": "Dark Theme for brackets.",
+	"homepage": "https://github.com/LAron/Liquid",
+	"author": {
+		"name": "Pawel Smolaga",
+		"email": "pawel.smolaga@gmail.com",
+		"url": "https://github.com/LAron"
+	},
+	"license": "MIT",
+	"screenshot": "screenshots/js.png",
+	"engines": {
+		"brackets": ">=0.43.0"
+	},
+	"theme": {
+		"file": "main.less",
+		"dark": true
+	},
+	"keywords": [
+		"liquid",
+		"theme",
+		"code",
+		"highlighting",
+		"dark"
+	],
+	"categories": [
+		"visual"
+	]
+}
