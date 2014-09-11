@@ -1,0 +1,200 @@
+/*------------------------------------*\
+    #Swatches
+\*------------------------------------*/
+
+@cmBuiltin: 	#5d8c9e;
+@cmDef: 		#1abc9c;
+@cmHeader: 		#FFF;
+@cmMeta: 		darken(#5d8c9e, 10%);
+@cmOperator: 	#f39c12;
+@cmQualifier: 	#83c75c;
+
+@cmAtom: 		#16a085;
+@cmLink: 		#FFF;
+@cmNumber: 		#f1c40f;
+@cmString: 		#f39c12;
+@cmString2: 	#f39c12;
+@cmVariable: 	#27ae60;
+@cmVariable2: 	#bdc3c7;
+@cmVariable3: 	#bdc3c7;
+
+@cmBracket: 	#FFF;
+@cmTag: 		#b7d2a1;
+
+@cmAttribute: 	#27ae60;
+@cmProperty: 	#5d8c9e;
+
+@cmComment: 	#7f8c8d;
+@cmError: 		#c0392b;
+@cmKeyword: 	#f1c40f;
+
+/*------------------------------------*\
+    #Variables
+\*------------------------------------*/
+
+@mainBackground: 	#293134;
+@mainFontColor: 	#ecf0f1;
+
+@cursorColor: 		#b7d28d;
+
+@gutterBackground: 			#343f41;
+@gutterBorderColor: 		darken(@gutterBackground, 1%);
+@gutterFontColor: 			#81969a;
+@gutterActiveBackground: 	darken(@gutterBackground, 2%);
+@gutterActiveFontColor: 	lighten(@gutterFontColor, 40%);
+
+@activelineBackground: 		#2f393c;
+@selectedBackground: 		lighten(#2f393c, 5%);
+
+/* Code Folding */
+@foldGutterColor: 		lighten(#343f41, 15%);
+@foldGutterHideColor: 	lighten(@foldGutterColor, 40%);
+@foldGutterFontSize: 	0.9em;
+
+@foldMarkerBackground: 	#0d4c73;
+@foldMarkerColor: 		#FFF;
+
+/*------------------------------------*\
+    #MICS
+\*------------------------------------*/
+.CodeMirror,
+.CodeMirror .CodeMirror-scroll {
+	background: @mainBackground;
+	color: @mainFontColor;
+}
+
+.CodeMirror-cursor {
+	border-left: 1px solid @cursorColor !important;
+}
+
+.CodeMirror-overwrite .CodeMirror-cursor {
+    border-bottom: 1px solid @cursorColor !important;
+    border-left: none !important;
+}
+
+.CodeMirror-gutters {
+	background: @gutterBackground;
+	border-right: 1px solid @gutterBorderColor;
+}
+
+.CodeMirror-linenumber {
+	color: @gutterFontColor;
+}
+
+.CodeMirror-activeline-background {
+	background: @activelineBackground !important;
+}
+
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
+	color: @gutterActiveFontColor;
+	background-color: @gutterActiveBackground !important;
+}
+
+.CodeMirror .CodeMirror-selected {
+    background: @selectedBackground;
+}
+
+/* Matching Brackets and Tags */
+
+.CodeMirror-matchingbracket {
+    background: #005a5a !important;
+    color: #fff !important;
+}
+
+.CodeMirror-matchingtag {
+    background: #004a4a !important;
+}
+
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-nonmatchingbracket {
+	color: #ff50a5 !important;
+}
+
+span.cm-builtin     { color: @cmBuiltin; 	}
+span.cm-def			{ color: @cmDef; 		}
+span.cm-header      { color: @cmHeader; 	}
+span.cm-meta		{ color: @cmMeta; 		}
+span.cm-operator	{ color: @cmOperator;	}
+span.cm-qualifier	{ color: @cmQualifier; 	}
+
+span.cm-atom		{ color: @cmAtom; 		}
+span.cm-link		{ color: @cmLink; 		}
+span.cm-number		{ color: @cmNumber; 	}
+span.cm-string		{ color: @cmString; 	}
+span.cm-string-2    { color: @cmString2; 	}
+span.cm-variable	{ color: @cmVariable; 	}
+span.cm-variable-2	{ color: @cmVariable2; 	}
+span.cm-variable-3	{ color: @cmVariable3; 	}
+
+span.cm-bracket		{ color: @cmBracket; 	}
+span.cm-tag			{ color: @cmTag; 		}
+
+span.cm-attribute	{ color: @cmAttribute; 	}
+span.cm-property	{ color: @cmProperty; 	}
+
+span.cm-comment		{ color: @cmComment; 	}
+span.cm-error		{ color: @cmError; 		}
+span.cm-keyword		{ color: @cmKeyword; 	}
+
+
+/*------------------------------------*\
+	#Brackets Code Folding Support
+\*------------------------------------*/
+.CodeMirror-foldgutter {
+	&-open:after {
+    	content: "\25bc";
+		font-size: @foldGutterFontSize;
+		color: @foldGutterColor;
+	}
+	&-folded:after {
+    	content: "\25b6";
+		font-size: @foldGutterFontSize;
+		color: @foldGutterHideColor;
+	}
+}
+
+.CodeMirror-foldgutter, .CodeMirror-foldgutter-open, .CodeMirror-foldgutter, .CodeMirror-foldgutter-folded, .CodeMirror-foldgutter-blank {
+    width: @foldGutterFontSize;
+    cursor: default;
+	line-height: 100%;
+}
+
+.CodeMirror-foldmarker {	
+	background: @foldMarkerBackground;
+	color: @foldMarkerColor;
+	font-family: sans-serif;
+	display: inline-block;
+	border: 1px solid lighten(@foldMarkerBackground, 7%);
+	box-sizing: border-box;
+	padding-bottom: 2px;
+	line-height: 100%;
+}
+
+
+/*------------------------------------*\
+	#Scrollbars
+\*------------------------------------*/
+::-webkit-scrollbar {
+	background: @gutterBackground !important;
+	height: 8px;
+	width: 8px;
+}
+::-webkit-scrollbar-thumb {
+	border-radius: (8px / 2px);
+	width: 8px;
+}
+.CodeMirror-gutter-filler {
+	background: none;
+	height: 8px;
+}
+.CodeMirror-scrollbar-filler {
+	background: none;
+	width: 8px;
+	height: 8px;
+}
+.tickmark-track,
+.tickmark-track .tickmark {
+	width: 8px;
+}
+.tickmark-track .tickmark {
+	background-color: #f1c40f;
+}
