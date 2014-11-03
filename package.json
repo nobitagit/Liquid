@@ -1,15 +1,15 @@
 {
-    "name": "laron.liquid",
+    "name": "liquid",
     "title": "Liquid",
     "description": "Dark Theme for brackets.",
     "homepage": "https://github.com/LAron/Liquid",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "pawel.smolaga@gmail.com",
     "license": "MIT",
     "theme": {
         "file": "liquid.less",
         "dark": true
     },
-    "keywords": ["theme","liquid","dark"],
+    "keywords": ["theme","liquid","dark","laron"],
 	"categories": ["visual"]
 }

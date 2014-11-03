@@ -1,7 +1,6 @@
 /*------------------------------------*\
     #Swatches
 \*------------------------------------*/
-
 @cmBuiltin: 	#5d8c9e;
 @cmDef: 		#1abc9c;
 @cmHeader: 		#FFF;
@@ -31,7 +30,6 @@
 /*------------------------------------*\
     #Variables
 \*------------------------------------*/
-
 @mainBackground: 	#293134;
 @mainFontColor: 	#ecf0f1;
 
@@ -40,7 +38,7 @@
 @gutterBackground: 			#343f41;
 @gutterBorderColor: 		darken(@gutterBackground, 1%);
 @gutterFontColor: 			#81969a;
-@gutterActiveBackground: 	darken(@gutterBackground, 2%);
+@gutterActiveBackground: 	lighten(@gutterBackground, 3%);
 @gutterActiveFontColor: 	lighten(@gutterFontColor, 40%);
 
 @activelineBackground: 		#2f393c;
@@ -65,6 +63,10 @@
 
 .CodeMirror-cursor {
 	border-left: 1px solid @cursorColor !important;
+}
+
+.CodeMirror-lines {
+	padding: 5px 0;	
 }
 
 .CodeMirror-overwrite .CodeMirror-cursor {
